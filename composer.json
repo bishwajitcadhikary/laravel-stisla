@@ -1,0 +1,54 @@
+{
+    "name": "bishwajitcadhikary/laravel-stisla",
+    "description": "Stisla Laravel Admin Template",
+    "keywords": [
+        "bishwajitcadhikary",
+        "laravel-stisla"
+    ],
+    "homepage": "https://github.com/bishwajitcadhikary/laravel-stisla",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Bishwajit Adhikary",
+            "email": "bishwajitcadhikary@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.4|^8.0",
+        "illuminate/support": "^8.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^6.0",
+        "phpunit/phpunit": "^9.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "WovoSoft\\LaravelStisla\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "WovoSoft\\LaravelStisla\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "WovoSoft\\LaravelStisla\\LaravelStislaServiceProvider"
+            ],
+            "aliases": {
+                "LaravelStisla": "WovoSoft\\LaravelStisla\\LaravelStislaFacade"
+            }
+        }
+    }
+}
